@@ -1,0 +1,2 @@
+(error "option :produce-models can't be set now. It must be set before (set-logic ...)")
+sat

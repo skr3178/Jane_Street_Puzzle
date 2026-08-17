@@ -1,0 +1,260 @@
+
+== in-block position 0 (layer 17+42*b+0), diffs vs block 1 ==
+block  0: shape [336, 224] (different shape)
+block  1:   0 weight diffs,   0 bias diffs
+block  2:  32 weight diffs,  19 bias diffs
+block  3:  32 weight diffs,  17 bias diffs
+block  4:  32 weight diffs,  20 bias diffs
+block  5:  32 weight diffs,  16 bias diffs
+block  6:  32 weight diffs,  16 bias diffs
+block  7:  32 weight diffs,  12 bias diffs  bias: [224]1(vs 0) [225]0(vs 1) [226]0(vs 1) [228]0(vs 1) [230]0(vs 1) [233]0(vs 1) [237]0(vs 1) [240]0(vs 1) [247]0(vs 1) [248]1(vs 0) [250]1(vs 0) [252]1(vs 0)
+block  8:  32 weight diffs,  15 bias diffs
+block  9:  32 weight diffs,  14 bias diffs
+block 10:  32 weight diffs,  18 bias diffs
+block 11:  32 weight diffs,  14 bias diffs
+block 12:  32 weight diffs,  16 bias diffs
+block 13:  32 weight diffs,  17 bias diffs
+block 14:  32 weight diffs,  19 bias diffs
+block 15:  32 weight diffs,  21 bias diffs
+block 16: 224 weight diffs,  15 bias diffs
+block 17: 224 weight diffs,  10 bias diffs  bias: [225]0(vs 1) [226]0(vs 1) [228]0(vs 1) [234]0(vs 1) [240]0(vs 1) [241]0(vs 1) [242]0(vs 1) [247]0(vs 1) [251]0(vs 1) [253]0(vs 1)
+block 18: 224 weight diffs,  18 bias diffs
+block 19: 224 weight diffs,  14 bias diffs
+block 20: 224 weight diffs,  17 bias diffs
+block 21: 224 weight diffs,  14 bias diffs
+block 22: 224 weight diffs,  15 bias diffs
+block 23: 224 weight diffs,  14 bias diffs
+block 24: 224 weight diffs,  15 bias diffs
+block 25: 224 weight diffs,  12 bias diffs  bias: [231]1(vs 0) [236]0(vs 1) [237]0(vs 1) [239]0(vs 1) [244]1(vs 0) [245]1(vs 0) [246]0(vs 1) [247]0(vs 1) [248]1(vs 0) [249]1(vs 0) [251]0(vs 1) [253]0(vs 1)
+block 26: 224 weight diffs,  14 bias diffs
+block 27: 224 weight diffs,  20 bias diffs
+block 28: 192 weight diffs,  13 bias diffs
+block 29: 224 weight diffs,  11 bias diffs  bias: [225]0(vs 1) [226]0(vs 1) [227]1(vs 0) [229]1(vs 0) [231]1(vs 0) [234]0(vs 1) [236]0(vs 1) [243]1(vs 0) [245]1(vs 0) [250]1(vs 0) [252]1(vs 0)
+block 30: 224 weight diffs,  18 bias diffs
+block 31: 224 weight diffs,  22 bias diffs
+block 32: shape [368, 256] (different shape)
+block 33: shape [368, 256] (different shape)
+block 34: shape [368, 256] (different shape)
+block 35: shape [368, 256] (different shape)
+block 36: shape [368, 256] (different shape)
+block 37: shape [368, 256] (different shape)
+block 38: shape [368, 256] (different shape)
+block 39: shape [368, 256] (different shape)
+block 40: shape [368, 256] (different shape)
+block 41: shape [368, 256] (different shape)
+block 42: shape [368, 256] (different shape)
+block 43: shape [368, 256] (different shape)
+block 44: shape [368, 256] (different shape)
+block 45: shape [368, 256] (different shape)
+block 46: shape [368, 256] (different shape)
+block 47: shape [368, 256] (different shape)
+block 48:  96 weight diffs,  47 bias diffs
+block 49:  96 weight diffs,  48 bias diffs
+block 50:  96 weight diffs,  47 bias diffs
+block 51:  96 weight diffs,  47 bias diffs
+block 52:  96 weight diffs,  50 bias diffs
+block 53:  96 weight diffs,  51 bias diffs
+block 54:  96 weight diffs,  45 bias diffs
+block 55:  96 weight diffs,  49 bias diffs
+block 56:  96 weight diffs,  49 bias diffs
+block 57:  96 weight diffs,  49 bias diffs
+block 58:  96 weight diffs,  47 bias diffs
+block 59:  96 weight diffs,  53 bias diffs
+block 60:  96 weight diffs,  48 bias diffs
+block 61:  64 weight diffs,  50 bias diffs
+block 62:  96 weight diffs,  46 bias diffs
+
+== in-block position 1 (layer 17+42*b+1), diffs vs block 1 ==
+block  0:   0 weight diffs,   0 bias diffs
+block  1:   0 weight diffs,   0 bias diffs
+block  2:   0 weight diffs,   0 bias diffs
+block  3:   0 weight diffs,   0 bias diffs
+block  4:   0 weight diffs,   0 bias diffs
+block  5:   0 weight diffs,   0 bias diffs
+block  6:   0 weight diffs,   0 bias diffs
+block  7:   0 weight diffs,   0 bias diffs
+block  8:   0 weight diffs,   0 bias diffs
+block  9:   0 weight diffs,   0 bias diffs
+block 10:   0 weight diffs,   0 bias diffs
+block 11:   0 weight diffs,   0 bias diffs
+block 12:   0 weight diffs,   0 bias diffs
+block 13:   0 weight diffs,   0 bias diffs
+block 14:   0 weight diffs,   0 bias diffs
+block 15:   0 weight diffs,   0 bias diffs
+block 16:   0 weight diffs,   0 bias diffs
+block 17:   0 weight diffs,   0 bias diffs
+block 18:   0 weight diffs,   0 bias diffs
+block 19:   0 weight diffs,   0 bias diffs
+block 20:   0 weight diffs,   0 bias diffs
+block 21:   0 weight diffs,   0 bias diffs
+block 22:   0 weight diffs,   0 bias diffs
+block 23:   0 weight diffs,   0 bias diffs
+block 24:   0 weight diffs,   0 bias diffs
+block 25:   0 weight diffs,   0 bias diffs
+block 26:   0 weight diffs,   0 bias diffs
+block 27:   0 weight diffs,   0 bias diffs
+block 28:   0 weight diffs,   0 bias diffs
+block 29:   0 weight diffs,   0 bias diffs
+block 30:   0 weight diffs,   0 bias diffs
+block 31:   0 weight diffs,   0 bias diffs
+block 32: shape [328, 368] (different shape)
+block 33: shape [328, 368] (different shape)
+block 34: shape [328, 368] (different shape)
+block 35: shape [328, 368] (different shape)
+block 36: shape [328, 368] (different shape)
+block 37: shape [328, 368] (different shape)
+block 38: shape [328, 368] (different shape)
+block 39: shape [328, 368] (different shape)
+block 40: shape [328, 368] (different shape)
+block 41: shape [328, 368] (different shape)
+block 42: shape [328, 368] (different shape)
+block 43: shape [328, 368] (different shape)
+block 44: shape [328, 368] (different shape)
+block 45: shape [328, 368] (different shape)
+block 46: shape [328, 368] (different shape)
+block 47: shape [328, 368] (different shape)
+block 48: shape [328, 336] (different shape)
+block 49: shape [328, 336] (different shape)
+block 50: shape [328, 336] (different shape)
+block 51: shape [328, 336] (different shape)
+block 52: shape [328, 336] (different shape)
+block 53: shape [328, 336] (different shape)
+block 54: shape [328, 336] (different shape)
+block 55: shape [328, 336] (different shape)
+block 56: shape [328, 336] (different shape)
+block 57: shape [328, 336] (different shape)
+block 58: shape [328, 336] (different shape)
+block 59: shape [328, 336] (different shape)
+block 60: shape [328, 336] (different shape)
+block 61: shape [328, 336] (different shape)
+block 62: shape [328, 336] (different shape)
+
+== in-block position 2 (layer 17+42*b+2), diffs vs block 1 ==
+block  0:   0 weight diffs,   0 bias diffs
+block  1:   0 weight diffs,   0 bias diffs
+block  2:   0 weight diffs,   0 bias diffs
+block  3:   0 weight diffs,   0 bias diffs
+block  4:   0 weight diffs,   0 bias diffs
+block  5:   0 weight diffs,   0 bias diffs
+block  6:   0 weight diffs,   0 bias diffs
+block  7:   0 weight diffs,   0 bias diffs
+block  8:   0 weight diffs,   0 bias diffs
+block  9:   0 weight diffs,   0 bias diffs
+block 10:   0 weight diffs,   0 bias diffs
+block 11:   0 weight diffs,   0 bias diffs
+block 12:   0 weight diffs,   0 bias diffs
+block 13:   0 weight diffs,   0 bias diffs
+block 14:   0 weight diffs,   0 bias diffs
+block 15:   0 weight diffs,   0 bias diffs
+block 16:   0 weight diffs,   0 bias diffs
+block 17:   0 weight diffs,   0 bias diffs
+block 18:   0 weight diffs,   0 bias diffs
+block 19:   0 weight diffs,   0 bias diffs
+block 20:   0 weight diffs,   0 bias diffs
+block 21:   0 weight diffs,   0 bias diffs
+block 22:   0 weight diffs,   0 bias diffs
+block 23:   0 weight diffs,   0 bias diffs
+block 24:   0 weight diffs,   0 bias diffs
+block 25:   0 weight diffs,   0 bias diffs
+block 26:   0 weight diffs,   0 bias diffs
+block 27:   0 weight diffs,   0 bias diffs
+block 28:   0 weight diffs,   0 bias diffs
+block 29:   0 weight diffs,   0 bias diffs
+block 30:   0 weight diffs,   0 bias diffs
+block 31:   0 weight diffs,   0 bias diffs
+block 32: shape [340, 328] (different shape)
+block 33: shape [340, 328] (different shape)
+block 34: shape [340, 328] (different shape)
+block 35: shape [340, 328] (different shape)
+block 36: shape [340, 328] (different shape)
+block 37: shape [340, 328] (different shape)
+block 38: shape [340, 328] (different shape)
+block 39: shape [340, 328] (different shape)
+block 40: shape [340, 328] (different shape)
+block 41: shape [340, 328] (different shape)
+block 42: shape [340, 328] (different shape)
+block 43: shape [340, 328] (different shape)
+block 44: shape [340, 328] (different shape)
+block 45: shape [340, 328] (different shape)
+block 46: shape [340, 328] (different shape)
+block 47: shape [340, 328] (different shape)
+block 48: shape [340, 328] (different shape)
+block 49: shape [340, 328] (different shape)
+block 50: shape [340, 328] (different shape)
+block 51: shape [340, 328] (different shape)
+block 52: shape [340, 328] (different shape)
+block 53: shape [340, 328] (different shape)
+block 54: shape [340, 328] (different shape)
+block 55: shape [340, 328] (different shape)
+block 56: shape [340, 328] (different shape)
+block 57: shape [340, 328] (different shape)
+block 58: shape [340, 328] (different shape)
+block 59: shape [340, 328] (different shape)
+block 60: shape [340, 328] (different shape)
+block 61: shape [340, 328] (different shape)
+block 62: shape [340, 328] (different shape)
+
+== in-block position 29 (layer 17+42*b+29), diffs vs block 1 ==
+block  0: 384 weight diffs,   0 bias diffs
+block  1:   0 weight diffs,   0 bias diffs
+block  2: 384 weight diffs,   0 bias diffs
+block  3: 384 weight diffs,   0 bias diffs
+block  4: 384 weight diffs,   0 bias diffs
+block  5:   0 weight diffs,   0 bias diffs
+block  6: 384 weight diffs,   0 bias diffs
+block  7: 384 weight diffs,   0 bias diffs
+block  8: 384 weight diffs,   0 bias diffs
+block  9:   0 weight diffs,   0 bias diffs
+block 10: 384 weight diffs,   0 bias diffs
+block 11: 384 weight diffs,   0 bias diffs
+block 12: 384 weight diffs,   0 bias diffs
+block 13:   0 weight diffs,   0 bias diffs
+block 14: 384 weight diffs,   0 bias diffs
+block 15: 384 weight diffs,   0 bias diffs
+block 16: 384 weight diffs,   0 bias diffs
+block 17: 384 weight diffs,   0 bias diffs
+block 18: 384 weight diffs,   0 bias diffs
+block 19: 384 weight diffs,   0 bias diffs
+block 20: 384 weight diffs,   0 bias diffs
+block 21: 384 weight diffs,   0 bias diffs
+block 22: 384 weight diffs,   0 bias diffs
+block 23: 384 weight diffs,   0 bias diffs
+block 24: 384 weight diffs,   0 bias diffs
+block 25: 384 weight diffs,   0 bias diffs
+block 26: 384 weight diffs,   0 bias diffs
+block 27: 384 weight diffs,   0 bias diffs
+block 28: 384 weight diffs,   0 bias diffs
+block 29: 384 weight diffs,   0 bias diffs
+block 30: 384 weight diffs,   0 bias diffs
+block 31: 384 weight diffs,   0 bias diffs
+block 32: 384 weight diffs,   0 bias diffs
+block 33: 384 weight diffs,   0 bias diffs
+block 34: 384 weight diffs,   0 bias diffs
+block 35: 384 weight diffs,   0 bias diffs
+block 36: 384 weight diffs,   0 bias diffs
+block 37: 384 weight diffs,   0 bias diffs
+block 38: 384 weight diffs,   0 bias diffs
+block 39: 384 weight diffs,   0 bias diffs
+block 40: 384 weight diffs,   0 bias diffs
+block 41: 384 weight diffs,   0 bias diffs
+block 42: 384 weight diffs,   0 bias diffs
+block 43: 384 weight diffs,   0 bias diffs
+block 44: 384 weight diffs,   0 bias diffs
+block 45: 384 weight diffs,   0 bias diffs
+block 46: 384 weight diffs,   0 bias diffs
+block 47: 384 weight diffs,   0 bias diffs
+block 48: 384 weight diffs,   0 bias diffs
+block 49: 384 weight diffs,   0 bias diffs
+block 50: 384 weight diffs,   0 bias diffs
+block 51: 384 weight diffs,   0 bias diffs
+block 52: 384 weight diffs,   0 bias diffs
+block 53: 384 weight diffs,   0 bias diffs
+block 54: 384 weight diffs,   0 bias diffs
+block 55: 384 weight diffs,   0 bias diffs
+block 56: 384 weight diffs,   0 bias diffs
+block 57: 384 weight diffs,   0 bias diffs
+block 58: 384 weight diffs,   0 bias diffs
+block 59: 384 weight diffs,   0 bias diffs
+block 60: 384 weight diffs,   0 bias diffs
+block 61: 384 weight diffs,   0 bias diffs
+block 62: 384 weight diffs,   0 bias diffs

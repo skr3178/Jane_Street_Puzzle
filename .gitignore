@@ -1,0 +1,7 @@
+# Model checkpoints (1.1 GB each) — download separately, see SKR.md
+*.pt
+# Python caches
+__pycache__/
+*.pyc
+# Vendored local packages (cloudpickle / netron shim) — reinstall via pip
+.shim/
