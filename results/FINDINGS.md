@@ -88,6 +88,20 @@ Also the older 63×30 bias-bit matrix: `static/bias_bitmap.{png,npy}`.
 - Shape-echo only: block halves (pos 18–28 vs 31–41) and the epilogue share
   width layout but NOT contents.
 
+## 8. Lane census, half-equivalence, ladder census (see BLOCK_ANATOMY.md)
+
+Mechanical tests of the user's packed-bitfield hypothesis:
+- **Lane census** (154 inputs × 63 boundaries): state slots form contiguous
+  zones — 159 slots only ever hold {0,1}, 31 hold small ints ≤8, 57 wide,
+  1 pinned at 128, 8 always zero. `dynamic/lane_map.{txt,png}`.
+- **Half-equivalence**: block positions 18–28 vs 31–41 are a **100% match as
+  op-template multisets** (3,265 rows, 26 templates each) while sharing almost
+  no cells — same operation set on different operands. `dynamic/half_templates.txt`.
+- **Ladder census**: ±2^k coefficients (128→2, halving every 2 layers) appear
+  in exactly 4+4 cells per step; **no (c, c−1) comparator pairs** anywhere in
+  the skeleton — the −127/−63/… values are payload-only. `dynamic/ladder_pairs.txt`.
+ASCII diagrams of all three + the whole-model loop: `BLOCK_ANATOMY.md`.
+
 ## Open threads
 
 - Read the block semantics from the collapsed listings (user's task).
