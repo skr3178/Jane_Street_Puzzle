@@ -1,0 +1,32 @@
+Repetition trace across all 197 distinct layers (2026-08-18)
+Script: the scan in this file's git history / FINDINGS.md §7; uses emu_layers.npz.
+
+1. Exact repetition (byte-hash): see hash_sequence.txt / distinct_layers.json.
+   38/42 block positions identical across all 63 blocks; prologue and epilogue
+   all-unique; no exact layer reuse between prologue, blocks, epilogue.
+
+2. Near-duplicates (same shape, <5% of nnz differing) among the 197 distinct:
+   exactly two pairs, both pos-0 payload layers:
+     block 19 (L815)  ~ block 31 (L1319): 0 weight diffs, 12 bias diffs
+     block 40 (L1697) ~ block 47 (L1991): 0 weight diffs, 16 bias diffs
+   i.e. identical weight matrices, differing only in bias values.
+   -> the payload's weight-staircase and its bias bits vary independently.
+
+3. Shape-level echo, contents NOT reused:
+   block positions 18..28 vs 31..41 have identical shape sequences but differ
+   in more cells than they have nonzeros (e.g. B18 vs B31: 440 weight diffs
+   over 381 nnz). Same story for the epilogue's echo of the block width motif.
+   The generator reused a LAYOUT convention, not content.
+
+full pairwise half-comparison (block 1):
+  B18 vs B31 (319,256): 440 wd / 381 nnz, 66 bias diffs
+  B19 vs B32 (288,319): 254 wd / 319 nnz, 62 bias diffs
+  B20 vs B33 (318,288): 343 wd / 378 nnz, 121 bias diffs
+  B21 vs B34 (288,318): 252 wd / 318 nnz, 60 bias diffs
+  B22 vs B35 (316,288): 334 wd / 372 nnz, 114 bias diffs
+  B23 vs B36 (288,316): 248 wd / 316 nnz, 56 bias diffs
+  B24 vs B37 (312,288): 316 wd / 360 nnz, 100 bias diffs
+  B25 vs B38 (288,312): 240 wd / 312 nnz, 48 bias diffs
+  B26 vs B39 (304,288): 224 wd / 336 nnz, 96 bias diffs
+  B27 vs B40 (288,304): 192 wd / 304 nnz, 32 bias diffs
+  B28 vs B41 (256,288): 316 wd / 318 nnz, 64 bias diffs

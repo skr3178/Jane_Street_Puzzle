@@ -1,0 +1,6 @@
+distinct layers: 197 / 2721
+global value alphabet size: 118
+values (|v|<=8 shown, 15/118): [-8.0, -7.0, -4.0, -3.0, -2.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0]
+layer type counts (all 2721): {'selection': 1, 'dense': 3, 'sparse': 2633, 'selection_scaled': 7, 'identity_plus_delta': 77}
+in-block positions with >1 distinct id: [0, 1, 2, 29]
+per-position distinct-id counts: [(0, 63), (1, 3), (2, 2), (29, 16)]

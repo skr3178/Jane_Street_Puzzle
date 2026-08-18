@@ -1,0 +1,66 @@
+in-block position 1 (layer 17+42*b+1), diffs vs block 1
+block-1 shape [296, 336]
+
+block  0:     0 weight diffs,   0 bias diffs
+block  1:     0 weight diffs,   0 bias diffs
+block  2:     0 weight diffs,   0 bias diffs
+block  3:     0 weight diffs,   0 bias diffs
+block  4:     0 weight diffs,   0 bias diffs
+block  5:     0 weight diffs,   0 bias diffs
+block  6:     0 weight diffs,   0 bias diffs
+block  7:     0 weight diffs,   0 bias diffs
+block  8:     0 weight diffs,   0 bias diffs
+block  9:     0 weight diffs,   0 bias diffs
+block 10:     0 weight diffs,   0 bias diffs
+block 11:     0 weight diffs,   0 bias diffs
+block 12:     0 weight diffs,   0 bias diffs
+block 13:     0 weight diffs,   0 bias diffs
+block 14:     0 weight diffs,   0 bias diffs
+block 15:     0 weight diffs,   0 bias diffs
+block 16:     0 weight diffs,   0 bias diffs
+block 17:     0 weight diffs,   0 bias diffs
+block 18:     0 weight diffs,   0 bias diffs
+block 19:     0 weight diffs,   0 bias diffs
+block 20:     0 weight diffs,   0 bias diffs
+block 21:     0 weight diffs,   0 bias diffs
+block 22:     0 weight diffs,   0 bias diffs
+block 23:     0 weight diffs,   0 bias diffs
+block 24:     0 weight diffs,   0 bias diffs
+block 25:     0 weight diffs,   0 bias diffs
+block 26:     0 weight diffs,   0 bias diffs
+block 27:     0 weight diffs,   0 bias diffs
+block 28:     0 weight diffs,   0 bias diffs
+block 29:     0 weight diffs,   0 bias diffs
+block 30:     0 weight diffs,   0 bias diffs
+block 31:     0 weight diffs,   0 bias diffs
+block 32: shape [328, 368] (different shape)
+block 33: shape [328, 368] (different shape)
+block 34: shape [328, 368] (different shape)
+block 35: shape [328, 368] (different shape)
+block 36: shape [328, 368] (different shape)
+block 37: shape [328, 368] (different shape)
+block 38: shape [328, 368] (different shape)
+block 39: shape [328, 368] (different shape)
+block 40: shape [328, 368] (different shape)
+block 41: shape [328, 368] (different shape)
+block 42: shape [328, 368] (different shape)
+block 43: shape [328, 368] (different shape)
+block 44: shape [328, 368] (different shape)
+block 45: shape [328, 368] (different shape)
+block 46: shape [328, 368] (different shape)
+block 47: shape [328, 368] (different shape)
+block 48: shape [328, 336] (different shape)
+block 49: shape [328, 336] (different shape)
+block 50: shape [328, 336] (different shape)
+block 51: shape [328, 336] (different shape)
+block 52: shape [328, 336] (different shape)
+block 53: shape [328, 336] (different shape)
+block 54: shape [328, 336] (different shape)
+block 55: shape [328, 336] (different shape)
+block 56: shape [328, 336] (different shape)
+block 57: shape [328, 336] (different shape)
+block 58: shape [328, 336] (different shape)
+block 59: shape [328, 336] (different shape)
+block 60: shape [328, 336] (different shape)
+block 61: shape [328, 336] (different shape)
+block 62: shape [328, 336] (different shape)

@@ -1,0 +1,21 @@
+PROLOGUE layers 0..16: 55 raw inputs -> state
+  ops=530 (clamping=530), aliases=1050, dead=0, consts=1964
+  terms-per-op histogram: {1: 277, 3: 29, 4: 55, 110: 169}
+BLOCK 0 layers 17..58: state -> state
+  ops=3015 (clamping=2902), aliases=10509, dead=0, consts=64
+  terms-per-op histogram: {1: 647, 2: 2148, 3: 220}
+BLOCK 1 layers 59..100: state -> state
+  ops=3045 (clamping=2930), aliases=10479, dead=0, consts=64
+  terms-per-op histogram: {1: 645, 2: 2116, 3: 284}
+BLOCK 17 layers 731..772: state -> state
+  ops=3055 (clamping=2950), aliases=10469, dead=0, consts=64
+  terms-per-op histogram: {1: 655, 2: 2148, 3: 252}
+BLOCK 33 layers 1403..1444: state -> state
+  ops=3112 (clamping=2968), aliases=10476, dead=0, consts=64
+  terms-per-op histogram: {1: 616, 2: 2212, 3: 284}
+BLOCK 49 layers 2075..2116: state -> state
+  ops=3045 (clamping=2930), aliases=10511, dead=0, consts=64
+  terms-per-op histogram: {1: 613, 2: 2180, 3: 252}
+EPILOGUE layers 2663..2720: state -> scalar
+  ops=5624 (clamping=5383), aliases=9441, dead=0, consts=128
+  terms-per-op histogram: {1: 1151, 2: 4200, 3: 224, 8: 24, 16: 24, 48: 1}

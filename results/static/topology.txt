@@ -1,0 +1,5 @@
+container: Sequential, 5442 modules
+module type counts: [('Linear', 2721), ('ReLU', 2721)]
+strict Linear/ReLU alternation: True
+=> pure chain: no residuals, no branches, no other op types
+input dim: 55, final out dim: 1

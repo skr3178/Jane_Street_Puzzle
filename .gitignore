@@ -5,3 +5,5 @@ __pycache__/
 *.pyc
 # Vendored local packages (cloudpickle / netron shim) — reinstall via pip
 .shim/
+# Unrelated local tooling
+stable_ssh/

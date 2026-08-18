@@ -1,0 +1,66 @@
+in-block position 0 (layer 17+42*b+0), diffs vs block 1
+block-1 shape [336, 256]
+
+block  0: shape [336, 224] (different shape)
+block  1:     0 weight diffs,   0 bias diffs
+block  2:    32 weight diffs,  19 bias diffs  bias diff idx: 224,226,227,231,232,233,234,238,239,240,241,242,245,246,247,250,251,254,255
+block  3:    32 weight diffs,  17 bias diffs  bias diff idx: 227,228,229,231,232,235,236,237,238,241,243,244,245,246,248,251,253
+block  4:    32 weight diffs,  20 bias diffs  bias diff idx: 224,227,228,229,230,231,235,236,237,239,240,241,243,244,245,247,248,250,251,252
+block  5:    32 weight diffs,  16 bias diffs  bias diff idx: 226,227,228,229,230,232,236,237,238,246,248,249,250,251,253,255
+block  6:    32 weight diffs,  16 bias diffs  bias diff idx: 224,226,230,232,236,237,238,239,240,241,242,244,245,246,247,254
+block  7:    32 weight diffs,  12 bias diffs  bias diff idx: 224,225,226,228,230,233,237,240,247,248,250,252
+block  8:    32 weight diffs,  15 bias diffs  bias diff idx: 225,226,227,231,232,233,234,235,237,240,241,242,246,248,255
+block  9:    32 weight diffs,  14 bias diffs  bias diff idx: 224,227,228,229,230,231,238,240,241,247,248,249,253,254
+block 10:    32 weight diffs,  18 bias diffs  bias diff idx: 224,225,226,229,230,231,234,235,237,238,239,243,244,245,248,249,250,252
+block 11:    32 weight diffs,  14 bias diffs  bias diff idx: 227,229,230,231,237,238,240,241,243,244,247,248,253,254
+block 12:    32 weight diffs,  16 bias diffs  bias diff idx: 226,228,229,230,233,234,237,239,240,241,242,244,246,248,249,255
+block 13:    32 weight diffs,  17 bias diffs  bias diff idx: 224,226,230,231,233,234,238,239,240,241,242,243,244,246,248,250,252
+block 14:    32 weight diffs,  19 bias diffs  bias diff idx: 227,228,230,231,234,236,237,238,239,241,242,243,244,245,247,249,250,251,254
+block 15:    32 weight diffs,  21 bias diffs  bias diff idx: 224,225,226,228,229,230,232,233,234,235,236,237,239,240,241,244,245,246,248,253,255
+block 16:   224 weight diffs,  15 bias diffs  bias diff idx: 226,228,229,233,236,239,240,243,244,246,247,249,250,251,252
+block 17:   224 weight diffs,  10 bias diffs  bias diff idx: 225,226,228,234,240,241,242,247,251,253
+block 18:   224 weight diffs,  18 bias diffs  bias diff idx: 224,225,226,232,234,235,237,238,239,240,243,244,247,249,250,251,254,255
+block 19:   224 weight diffs,  14 bias diffs  bias diff idx: 226,227,228,229,230,231,236,237,238,240,244,245,246,248
+block 20:   224 weight diffs,  17 bias diffs  bias diff idx: 224,225,227,232,233,234,237,239,243,245,246,247,249,250,251,252,253
+block 21:   224 weight diffs,  14 bias diffs  bias diff idx: 224,226,232,233,237,239,240,241,247,249,251,253,254,255
+block 22:   224 weight diffs,  15 bias diffs  bias diff idx: 224,225,226,228,230,231,232,236,238,241,242,245,246,252,253
+block 23:   224 weight diffs,  14 bias diffs  bias diff idx: 225,226,227,228,231,234,235,238,242,244,248,249,250,251
+block 24:   224 weight diffs,  15 bias diffs  bias diff idx: 228,229,231,233,235,236,237,238,241,242,245,248,251,254,255
+block 25:   224 weight diffs,  12 bias diffs  bias diff idx: 231,236,237,239,244,245,246,247,248,249,251,253
+block 26:   224 weight diffs,  14 bias diffs  bias diff idx: 224,228,230,231,233,235,236,237,239,241,244,250,251,252
+block 27:   224 weight diffs,  20 bias diffs  bias diff idx: 224,225,227,228,229,231,232,233,237,239,240,242,243,244,247,248,250,251,253,255
+block 28:   192 weight diffs,  13 bias diffs  bias diff idx: 224,225,228,230,233,234,235,236,238,242,245,248,254
+block 29:   224 weight diffs,  11 bias diffs  bias diff idx: 225,226,227,229,231,234,236,243,245,250,252
+block 30:   224 weight diffs,  18 bias diffs  bias diff idx: 224,225,226,227,231,232,234,236,237,239,243,245,247,248,249,250,251,255
+block 31:   224 weight diffs,  22 bias diffs  bias diff idx: 226,227,228,230,231,232,233,235,236,237,238,239,240,242,243,245,246,247,248,250,253,254
+block 32: shape [368, 256] (different shape)
+block 33: shape [368, 256] (different shape)
+block 34: shape [368, 256] (different shape)
+block 35: shape [368, 256] (different shape)
+block 36: shape [368, 256] (different shape)
+block 37: shape [368, 256] (different shape)
+block 38: shape [368, 256] (different shape)
+block 39: shape [368, 256] (different shape)
+block 40: shape [368, 256] (different shape)
+block 41: shape [368, 256] (different shape)
+block 42: shape [368, 256] (different shape)
+block 43: shape [368, 256] (different shape)
+block 44: shape [368, 256] (different shape)
+block 45: shape [368, 256] (different shape)
+block 46: shape [368, 256] (different shape)
+block 47: shape [368, 256] (different shape)
+block 48:    96 weight diffs,  47 bias diffs
+block 49:    96 weight diffs,  48 bias diffs
+block 50:    96 weight diffs,  47 bias diffs
+block 51:    96 weight diffs,  47 bias diffs
+block 52:    96 weight diffs,  50 bias diffs
+block 53:    96 weight diffs,  51 bias diffs
+block 54:    96 weight diffs,  45 bias diffs
+block 55:    96 weight diffs,  49 bias diffs
+block 56:    96 weight diffs,  49 bias diffs
+block 57:    96 weight diffs,  49 bias diffs
+block 58:    96 weight diffs,  47 bias diffs
+block 59:    96 weight diffs,  53 bias diffs
+block 60:    96 weight diffs,  48 bias diffs
+block 61:    64 weight diffs,  50 bias diffs
+block 62:    96 weight diffs,  46 bias diffs
