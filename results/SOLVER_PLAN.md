@@ -13,12 +13,22 @@ Stage 2.5/3.
 | 0 | Faithfulness prep: true domain, frozen store, bounds | PASSED | f28991a; STAGE0_RESULTS.md |
 | 1 | Build encoder + self-test bit-exact vs emulator | PASSED | 5bcee28; emit_smt.py (192,575-op QF_LIA) |
 | 1.5 | Checkpoint equivalence (intermediate states S1/S16/S32/S48) | PARTIAL | needle exact on 100+ inputs; intermediates not yet checked |
-| 2 | Epilogue target analysis (which s63 coords reach needle) | NOT STARTED <- NEXT | safe, unfenced |
-| 2.5 | Reduced-round scaling probe (invert 1,2,4,8… blocks) | NOT STARTED | safe; first tractability signal |
-| 3 | Threshold/hardness sweep (needle >= -12,-11,-10,…) | NOT STARTED | safe; near-miss vectors only |
-| 4 | Formulation x solver matrix (A/B/C x z3/bitwuzla/yices) | NOT STARTED | safe |
-| 5 | Full exact solve (needle >= 1) | NOT STARTED | FENCED: explicit user go required; answer-bearing |
-| 6 | Independent verification of any SAT | NOT STARTED | fenced output handling |
+| 2 | Epilogue target analysis (which s63 coords reach needle) | DONE | 192/256 slots reach needle; stage2_epilogue_target.json |
+| 2.5 | Reduced-round scaling probe (fixed target state) | DONE | LINEAR (63 rounds ~5s) — but measures PROPAGATION, not search |
+| 3 | Threshold/smoke hardness probe (x free) | DONE — NEGATIVE | solver inversion FAILS even on 1 free byte; STAGE3_VERDICT.md |
+| 4 | Formulation x solver matrix | ABANDONED | z3-LIA, z3-BV, bitwuzla-BV all fail 1 free byte; not a tuning gap |
+| 5 | Full exact solve (needle >= 1) | NOT VIABLE via SMT | monolithic inversion ruled out |
+| 6 | Independent verification of any SAT | n/a | — |
+
+## STAGE 3 VERDICT: solver route exhausted -> pivot to READING
+
+Monolithic SMT/SAT cannot invert this network (avalanche: 1 free byte ->
+~185k branchable ReLUs; brute force does 256 values in microseconds, solvers
+time out or take ~196s). With local search also plateaued (-12/-13), the
+forward-easy/inverse-hard signature points to the intended route being to
+READ the compiled algorithm: results/static/*_collapsed.txt (transition
+function), results/decomp2/param_table.json (63-row data), results/BLOCK_ANATOMY.md
+(zone map), results/decomp/epilogue_cone.txt. That reading is the user's task.
 
 Solvers on hand: z3 5.1.0 (pip, working). bitwuzla/yices/kissat to be added
 if a BV or pure-SAT path is chosen (Stage 4).

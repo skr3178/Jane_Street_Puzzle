@@ -1,0 +1,58 @@
+[
+ {
+  "k": 1,
+  "layers": 59,
+  "ops": 2552,
+  "result": "sat",
+  "sec": 0.07,
+  "verified": true
+ },
+ {
+  "k": 2,
+  "layers": 101,
+  "ops": 5553,
+  "result": "sat",
+  "sec": 0.12,
+  "verified": true
+ },
+ {
+  "k": 4,
+  "layers": 185,
+  "ops": 11545,
+  "result": "sat",
+  "sec": 0.22,
+  "verified": true
+ },
+ {
+  "k": 8,
+  "layers": 353,
+  "ops": 23739,
+  "result": "sat",
+  "sec": 0.44,
+  "verified": true
+ },
+ {
+  "k": 16,
+  "layers": 689,
+  "ops": 46757,
+  "result": "sat",
+  "sec": 0.87,
+  "verified": true
+ },
+ {
+  "k": 32,
+  "layers": 1361,
+  "ops": 94173,
+  "result": "sat",
+  "sec": 1.95,
+  "verified": true
+ },
+ {
+  "k": 63,
+  "layers": 2663,
+  "ops": 186952,
+  "result": "sat",
+  "sec": 4.63,
+  "verified": true
+ }
+]
