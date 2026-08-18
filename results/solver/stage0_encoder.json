@@ -1,0 +1,86 @@
+{
+ "per_char": {},
+ "errors": {},
+ "identity_code_chars": 256,
+ "zero_code_chars": [
+  0
+ ],
+ "nonidentity": {},
+ "code_range_singles": [
+  0,
+  255
+ ],
+ "unicode_probes": {
+  "'\u00e9'": {
+   "nnz": 1,
+   "vals": [
+    233
+   ],
+   "pos": [
+    0
+   ]
+  },
+  "'\u00fc'": {
+   "nnz": 1,
+   "vals": [
+    252
+   ],
+   "pos": [
+    0
+   ]
+  },
+  "'\u20ac'": {
+   "nnz": 1,
+   "vals": [
+    8364
+   ],
+   "pos": [
+    0
+   ]
+  },
+  "'\u4e2d'": {
+   "nnz": 1,
+   "vals": [
+    20013
+   ],
+   "pos": [
+    0
+   ]
+  },
+  "'\ud83d\ude00'": {
+   "nnz": 1,
+   "vals": [
+    128512
+   ],
+   "pos": [
+    0
+   ]
+  }
+ },
+ "abc_vector_head": [
+  97,
+  98,
+  99,
+  0,
+  0,
+  0
+ ],
+ "position_independent": true,
+ "mid_string_zero_example": {
+  "char_ord": 0,
+  "vector_head": [
+   97,
+   0,
+   99,
+   0,
+   0
+  ]
+ },
+ "overlong": {
+  "len60_nnz": 55,
+  "len56_head_tail": [
+   97,
+   97
+  ]
+ }
+}
