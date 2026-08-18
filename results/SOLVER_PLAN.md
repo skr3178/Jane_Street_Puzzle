@@ -1,13 +1,17 @@
-# Solver plan — staged SMT/SAT attack on the compressed recurrence (2026-08-18, rev 2)
+# Solver plan — staged SMT/SAT attack on the compressed recurrence (2026-08-18, rev 3)
 
-Status: PLANNING ONLY. Nothing has been solved. A background design workflow
-(4 encoding designs -> 4 adversarial soundness audits -> 1 synthesis) is
-producing the build-ready spec; it will be cross-checked against this plan
-and merged when it completes.
-Rev 2 incorporates the external review: Stage 1.5 checkpoint equivalence,
-epilogue target analysis, explicit BV-width invariant, encoder-domain vs
-string-realizability split, non-monotonic threshold interpretation, and the
-formulation x solver portfolio matrix.
+Status: Stage 0 DONE (see STAGE0_RESULTS.md). Nothing answer-bearing solved.
+Rev 2 incorporated the external review (Stage 1.5 checkpoint equivalence,
+epilogue target analysis, BV-width invariant, encoder/realizability split,
+non-monotonic thresholds, formulation x solver matrix).
+Rev 3 folds in Stage 0 FINDINGS — three changes below marked [S0]:
+  [S0-a] True input domain is bytes 0..255 (identity encoder), NOT 0..126.
+  [S0-b] Frozen store 192..255 value-constant across all boundaries -> shared
+         variable per input across rounds is sound.
+  [S0-c] Interval propagation DIVERGES (int64 overflow; proves only 35/159
+         Boolean slots). "Interval-proven widths + proven Boolean set" is
+         DROPPED; replaced by empirical bound (peak |act| = 440) + GUARDED
+         widths (overflow-guard assertions per intermediate).
 
 ## The formulation
 
@@ -34,11 +38,15 @@ QF_LIA; possibly pure CNF (kissat/CaDiCaL) once slot domains are proven.
 3. Zone/Boolean domains from the lane census are EMPIRICAL (154-string
    corpus). Asserting them unproven = possible false UNSAT. Prove first
    (interval/abstract propagation) or mark the run heuristic-only.
-4. BV widths need PROVEN bounds. Explicit invariant: for every symbolic
-   intermediate v_i, establish |v_i| <= M_i by interval propagation from the
-   asserted input domain, then pick signed width w_i with 2^(w_i - 1) > M_i.
-   Then BV arithmetic == mathematical integer arithmetic for every input in
-   the domain — categorically stronger than "320 was the largest observed."
+4. [S0-c REVISED] BV widths: interval propagation DIVERGES here (overflows
+   int64 over 2721 layers; cancellation-blind), so proven widths are NOT
+   cheaply obtainable. Sound replacement: pick a signed width with large
+   headroom over the empirical peak (|act| = 440 over 400 random full-byte
+   strings) — e.g. 16-bit +-32767 — and ADD an overflow-guard assertion per
+   intermediate (assert value fits the word). If the solver ever needs a value
+   outside range it is FLAGGED, not silently wrapped -> soundness without a
+   divergent proof. A true proof would need a relational domain (zonotope),
+   deferred unless needed.
 5. ENCODING RANGE vs ALLOWED INPUT RANGE are separate questions:
      (i)  string -> x   (what vectors can the encoder actually produce:
           per-slot code set AND cross-slot structure, e.g. prefix-of-codes
@@ -48,8 +56,9 @@ QF_LIA; possibly pure CNF (kissat/CaDiCaL) once slot domains are proven.
    valid x may correspond to no string. Every SAT needs the realizability
    check (decode -> re-encode -> compare). This is the biggest remaining
    faithfulness question and Stage 0's core job.
-6. Domain versions, formalized:
-     A (ground truth): x_i in the PROVEN encoder domain (Stage 0 output).
+6. [S0-a] Domain versions, formalized:
+     A (ground truth): x_i in {0..255} (PROVEN: encoder is byte-identity,
+                       0 = padding, position-independent).
      B (heuristic):    x_i in [32,126] printable.
    Interpretation: B SAT -> candidate; B UNSAT -> no printable solution ONLY;
    A SAT -> possibly non-printable solution; A UNSAT -> strong result.
@@ -60,20 +69,22 @@ QF_LIA; possibly pure CNF (kissat/CaDiCaL) once slot domains are proven.
 - Collapsed listings (~78% of rows are pass-through wires) — on disk.
 - Skeleton instantiated once, stamped 63x with the operand table
   (results/decomp2/param_table.json); only pos 0/1/2/29 vary.
-- Frozen store (slots 192-255): single shared variables across all 63 rounds
-  — AFTER verifying literal identity pass-through (coeff +1, bias 0).
+- [S0-b] Frozen store (slots 192-255): single shared variables across all 63
+  rounds — VERIFIED value-constant across all boundaries (payload reads them
+  but does not modify them; a few fan out). Value preservation confirmed.
 - Per-block distillation: E/F (slots 160-191) depend only on the frozen store
   within a block (function varies per block via pos-29 selector) -> precompute
   63 small E_b(x), F_b(x); the recurrence core then lives on slots 0-159.
 - Drop always-0 slots and constants (64, 249-255, 247) once proven.
-- Boolean-type the PROVEN {0,1} slots only.
+- [S0-c] Boolean-type slots only under overflow-guard (not via interval proof;
+  only 35/159 are interval-provable). Empirically 224/256 stay in {0,1}.
 
 ## The stages
 
 | Stage | What | Safety | Go/no-go signal |
 |---|---|---|---|
 | Design (running) | 4 designs -> audits -> synthesized spec | safe | spec lands |
-| 0 Faithfulness prep | (i) encoder semantics: wide-charset sweep establishing the true per-slot code set AND the cross-slot string structure (prefix/padding); (ii) frozen-store identity check; (iii) interval propagation -> proven |v_i| <= M_i everywhere + proven Boolean set; (iv) acceptance-predicate note (needle>=1) | safe, pure measurement | all checks pass; domain A fixed |
+| 0 Faithfulness prep [DONE] | (i) domain = bytes 0..255 identity, 0=pad [DONE]; (ii) frozen store value-constant [DONE]; (iii) interval prop DIVERGES -> use empirical peak 440 + guarded widths [DONE]; (iv) target needle>=1 [DONE]. See STAGE0_RESULTS.md | safe, pure measurement | PASSED |
 | 1 Encoder build | emit compressed instance; SELF-TEST: fix a known input, solver needle == emulator needle exactly | safe | exact match |
 | 1.5 Checkpoint equivalence | dozens-hundreds of random valid x: BV/LIA model == int64 emulator at checkpoints S0, S1, S2, S16, S32, S48, S63, needle — not just the final scalar. Deliberately include ReLU-boundary cases, extreme propagated values, and inputs straddling regime transitions 16/32/48 | safe | zero mismatches; catches "right needle, wrong intermediate" encodings |
 | 2 Epilogue target analysis | more than sat-probing: extract the needle's dependency cone through the epilogue (start: results/decomp/epilogue_cone.txt) — which s63 coordinates carry nonzero influence, signs, bounds; then solve needle>=1 over s63 alone to characterize (minimally) which terminal combinations can fire; ideally reduce the target to a small explicit condition c1*s_i1 + ... + ck*s_ik >= 1 | low risk (state-level, not input-level) | a compact target condition for the 63-round core |
