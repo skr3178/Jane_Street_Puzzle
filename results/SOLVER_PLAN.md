@@ -1,6 +1,30 @@
-# Solver plan — staged SMT/SAT attack on the compressed recurrence (2026-08-18, rev 3)
+# Solver plan — staged SMT/SAT attack on the compressed recurrence (2026-08-18, rev 4)
 
-Status: Stage 0 DONE (see STAGE0_RESULTS.md). Nothing answer-bearing solved.
+Status: Stages 0 and 1 DONE. Now at the Stage 1 -> Stage 2 gate. Nothing
+answer-bearing solved. Everything so far is PREPARATION (the machine is built
+and proven faithful); the first "can the solver make progress" signal comes at
+Stage 2.5/3.
+
+## Progress tracker
+
+| Stage | What | Status | Commit / note |
+|---|---|---|---|
+| Design | encoding designs + adversarial audits | DONE (as chat review; the subagent workflow stalled and was dropped) | — |
+| 0 | Faithfulness prep: true domain, frozen store, bounds | PASSED | f28991a; STAGE0_RESULTS.md |
+| 1 | Build encoder + self-test bit-exact vs emulator | PASSED | 5bcee28; emit_smt.py (192,575-op QF_LIA) |
+| 1.5 | Checkpoint equivalence (intermediate states S1/S16/S32/S48) | PARTIAL | needle exact on 100+ inputs; intermediates not yet checked |
+| 2 | Epilogue target analysis (which s63 coords reach needle) | NOT STARTED <- NEXT | safe, unfenced |
+| 2.5 | Reduced-round scaling probe (invert 1,2,4,8… blocks) | NOT STARTED | safe; first tractability signal |
+| 3 | Threshold/hardness sweep (needle >= -12,-11,-10,…) | NOT STARTED | safe; near-miss vectors only |
+| 4 | Formulation x solver matrix (A/B/C x z3/bitwuzla/yices) | NOT STARTED | safe |
+| 5 | Full exact solve (needle >= 1) | NOT STARTED | FENCED: explicit user go required; answer-bearing |
+| 6 | Independent verification of any SAT | NOT STARTED | fenced output handling |
+
+Solvers on hand: z3 5.1.0 (pip, working). bitwuzla/yices/kissat to be added
+if a BV or pure-SAT path is chosen (Stage 4).
+
+## Revision history
+
 Rev 2 incorporated the external review (Stage 1.5 checkpoint equivalence,
 epilogue target analysis, BV-width invariant, encoder/realizability split,
 non-monotonic thresholds, formulation x solver matrix).
@@ -12,6 +36,8 @@ Rev 3 folds in Stage 0 FINDINGS — three changes below marked [S0]:
          Boolean slots). "Interval-proven widths + proven Boolean set" is
          DROPPED; replaced by empirical bound (peak |act| = 440) + GUARDED
          widths (overflow-guard assertions per intermediate).
+Rev 4 adds the progress tracker above and records Stage 1 DONE (compressed
+QF_LIA encoder, faithful vs emulator numerically and via z3).
 
 ## The formulation
 
