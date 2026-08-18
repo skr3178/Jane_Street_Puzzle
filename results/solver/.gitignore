@@ -1,2 +1,3 @@
 model_lia.smt2
-*.smt2.gz
+selftest_hello.smt2
+*.smt2
