@@ -1,0 +1,13 @@
+coeff 128 at layer 60 (pos 1): rows [228, 229, 230, 231]
+coeff -128 at layer 60 (pos 1): rows [228, 229, 230, 231]
+coeff 64 at layer 62 (pos 3): rows [264, 265, 266, 267]
+coeff -64 at layer 62 (pos 3): rows [264, 265, 266, 267]
+
+descendant tracking from pos-1 rows (one vector per lane):
+  lanes = rows [228, 229, 230, 231] (from +128 cells)
+  first position where lane descendant sets intersect: {}
+  lane row 228: descendants at block output = {'E:160': 1, 'F:161-191': 6}
+  lane row 229: descendants at block output = {'F:161-191': 7}
+  lane row 230: descendants at block output = {'F:161-191': 7}
+  lane row 231: descendants at block output = {'F:161-191': 7}
+  all four lanes have identical block-output footprint: False
