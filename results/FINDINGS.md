@@ -100,6 +100,10 @@ Mechanical tests of the user's packed-bitfield hypothesis:
 - **Ladder census**: ±2^k coefficients (128→2, halving every 2 layers) appear
   in exactly 4+4 cells per step; **no (c, c−1) comparator pairs** anywhere in
   the skeleton — the −127/−63/… values are payload-only. `dynamic/ladder_pairs.txt`.
+- **Ladder idiom RESOLVED**: the ±2^k ladder is a 7-level restoring
+  **bit-extraction** — each block spreads four `wide` slots into 7 bit-slots +
+  remainder (exact 8-bit decomposition on [0,255], saturating above). Traced
+  symbolically + swept exact on all 4 lanes. `reading/LADDER_IDIOM.md`.
 ASCII diagrams of all three + the whole-model loop: `BLOCK_ANATOMY.md`.
 
 ## Open threads

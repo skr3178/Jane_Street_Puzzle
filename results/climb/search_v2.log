@@ -1,0 +1,7 @@
+Using seed 1787062642
+
+=== Search Report ===
+Total evals: 76808
+Time: 577s
+Best needle: -12
+FAIL. Try increasing --timeout or running multiple seeds.
